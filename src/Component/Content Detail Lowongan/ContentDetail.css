@@ -1,0 +1,115 @@
+/* ContentDetail.css */
+
+.content-detail-container {
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  color: #333333;
+}
+
+.isi-contentDetail {
+  margin: 0 2rem;
+}
+
+.posisi p {
+  font-size: 2.5rem; /* Lebih disarankan menggunakan ukuran rem untuk responsivitas */
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin-bottom: 16px;
+  color: #00b074;
+  text-transform: uppercase;
+}
+
+.descPekerjaan {
+  background-color: #fff;
+  padding: 1rem;
+  width: 100%;
+  box-shadow: 1px 0px 3px 1px rgba(0, 0, 0, 0.4);
+  border-radius: 20px;
+  flex-wrap: wrap;
+}
+
+.wrapper-content {
+  display: flex;
+  gap: 2rem;
+}
+.descPekerjaan strong {
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  font-family: monospace;
+}
+
+.descPekerjaan p {
+  padding-left: 1rem;
+}
+
+.kualifikasi .job-qualification {
+  font-size: 1rem;
+  margin-bottom: 12px;
+}
+
+.tanggal .job-dates {
+  font-size: 1rem;
+  color: #999999;
+}
+
+p {
+  margin: 0;
+}
+
+/* ContentDetail.css */
+
+.formPendaftaran {
+  margin-top: 30px;
+}
+
+.formPendaftaran p {
+  font-size: 2.5rem; /* Lebih disarankan menggunakan ukuran rem untuk responsivitas */
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin-bottom: 16px;
+  color: #00b074;
+  text-transform: uppercase;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #333333;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #00b074;
+  color: #ffffff;
+  padding: 12px 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #007547;
+}
+
+/* Optional: Add responsive styles for smaller screens */
+@media screen and (max-width: 600px) {
+  .content-detail-container {
+    padding: 16px;
+  }
+}
