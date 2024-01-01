@@ -46,37 +46,53 @@ export default function Core() {
 
   return (
     <div>
-      <h1 className="text-center">Announcement Rekrutmen</h1>
+      {positions && positions.length > 0 ? (
+        <>
+          {positions === 0 && (
+            <h1 className="text-center">Announcement Rekrutmen</h1>
+          )}
 
-      <div className="container">
-        <h5>Posisi Yang dilamar</h5>
-        <PositionsTabs
-          positions={positions}
-          activeTab={activeTab}
-          handleTabClick={handleTabClick}
-        />
+          <div className="container">
+            {positions.length > 0 ? (
+              <>
+                <h5>Posisi Yang dilamar</h5>
+                <PositionsTabs
+                  positions={positions}
+                  activeTab={activeTab}
+                  handleTabClick={handleTabClick}
+                />
 
-        <div className="tab-content">
-          {positions.map((position) => (
-            <div
-              className={`tab-pane fade ${
-                activeTab === position.ID_Lowongan ? "show active" : ""
-              }`}
-              id={`content-${position.ID_Lowongan}`}
-              key={position.ID_Lowongan}
-            >
-              <SearchBar
-                searchTerm={searchTerm}
-                setSearchTerm={setSearchTerm}
-              />
-              <ApplicantsTable
-                filteredApplicants={filteredApplicants}
-                statuses={statuses}
-              />
-            </div>
-          ))}
-        </div>
-      </div>
+                <div className="tab-content">
+                  {positions.map((position) => (
+                    <div
+                      className={`tab-pane fade ${
+                        activeTab === position.ID_Lowongan ? "show active" : ""
+                      }`}
+                      id={`content-${position.ID_Lowongan}`}
+                      key={position.ID_Lowongan}
+                    >
+                      <SearchBar
+                        searchTerm={searchTerm}
+                        setSearchTerm={setSearchTerm}
+                      />
+                      <ApplicantsTable
+                        filteredApplicants={filteredApplicants}
+                        statuses={statuses}
+                      />
+                    </div>
+                  ))}
+                </div>
+              </>
+            ) : (
+              <p>Belum ada pengumuman rekrutmen.</p>
+            )}
+          </div>
+        </>
+      ) : (
+        <p style={{ textAlign: "center" }}>
+          Data pengumuman rekrutmen tidak tersedia.
+        </p>
+      )}
     </div>
   );
 }
